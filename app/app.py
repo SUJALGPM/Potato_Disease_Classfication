@@ -7,7 +7,10 @@ import os
 st.title("🥔 Potato Leaf Disease Classifier")
 
 # Path to the model
-model_path = 'S:/SPIT/Experiments/Shreeya_Nemade/potato-disease-classification/saved_models/potato_disease_model.h5'
+# model_path = 'S:/SPIT/Experiments/Shreeya_Nemade/potato-disease-classification/saved_models/potato_disease_model.h5'
+
+# Path to the model (relative)
+model_path = os.path.join('saved_models', 'potato_disease_model.h5')
 
 # Load the model
 with st.spinner("🔄 Loading model..."):
