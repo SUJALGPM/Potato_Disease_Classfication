@@ -6,10 +6,11 @@ import os
 
 st.title("🥔 Potato Leaf Disease Classifier")
 
-# Path to the model
-# model_path = 'S:/SPIT/Experiments/Shreeya_Nemade/potato-disease-classification/saved_models/potato_disease_model.h5'
 
-# Path to the model (relative)
+# # Path to the model
+# # model_path = 'S:/SPIT/Experiments/Shreeya_Nemade/potato-disease-classification/saved_models/potato_disease_model.h5'
+
+# Path to the model
 model_path = os.path.join('saved_models', 'potato_disease_model.h5')
 
 # Load the model
@@ -24,7 +25,15 @@ with st.spinner("🔄 Loading model..."):
         st.error(f"❌ Failed to load model: {e}")
         st.stop()
 
-# Class labels (must match training order)
+# # Existing classes (you want to keep these)
+# existing_classes = ['Early Blight', 'Late Blight', 'Healthy']
+
+# # New classes to append
+# new_classes = ['Bacteria', 'Fungi', 'Nematode', 'Pest', 'Phytopthora', 'Virus']
+
+# # Combine the two lists of classes
+# classes = existing_classes + new_classes
+
 classes = ['Early Blight', 'Late Blight', 'Healthy']
 
 # File uploader

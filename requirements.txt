@@ -5,3 +5,6 @@ seaborn
 scikit-learn
 opencv-python
 streamlit
+requests
+streamlit-lottie
+plotly
