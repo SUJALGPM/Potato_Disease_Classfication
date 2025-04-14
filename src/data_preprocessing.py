@@ -4,10 +4,12 @@ def get_data_generators(data_dir, img_size=(128, 128), batch_size=32):
     datagen = ImageDataGenerator(
         rescale=1./255,
         validation_split=0.2,
-        rotation_range=20,
-        zoom_range=0.2,
+        rotation_range=30,
+        zoom_range=0.3,
         shear_range=0.2,
-        horizontal_flip=True
+        brightness_range=[0.8, 1.2],
+        horizontal_flip=True,
+        vertical_flip=True
     )
 
     train_gen = datagen.flow_from_directory(

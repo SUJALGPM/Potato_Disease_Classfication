@@ -22,7 +22,7 @@ with st.spinner("🔄 Loading model..."):
         st.stop()
 
 # Class labels (must match training order)
-classes = ['Potato_Early_blight', 'Potato_healthy', 'Potato_Late_blight']
+classes = ['Early Blight', 'Late Blight', 'Healthy']
 
 # File uploader
 uploaded_file = st.file_uploader("📁 Upload a potato leaf image", type=["jpg", "jpeg", "png"])
